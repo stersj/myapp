@@ -1,9 +1,9 @@
 import React, { useState} from 'react';
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from '@material-ui/icons/Facebook';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
-import { Icon } from '@material-ui/core';
+import { IconContext } from 'react-icons';
 import "./navbar.css";
 
 function Navbar() {
@@ -13,17 +13,17 @@ function Navbar() {
         
   return (
     <>
-      <Icon value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
-            <InstagramIcon onClick={showSidebar} />
+            <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
+           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <FacebookIcon />
+                <AiIcons.AiOutlineClose />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
@@ -38,7 +38,7 @@ function Navbar() {
             })}
           </ul>
         </nav>
-      </Icon>
+      </IconContext.Provider>
     </>
        
     );

@@ -1,40 +1,43 @@
 import React from 'react';
-import MailIcon from "@material-ui/icons/Mail";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from '@material-ui/icons/Facebook';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
   {
     title: 'Home',
     path: '/',
-    icon: <MailIcon />,
+    icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
   {
     title: 'Reports',
     path: '/reports',
-    icon: <GitHubIcon />,
+    icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
   {
     title: 'Products',
     path: '/products',
-    icon: <LinkedInIcon />,
+    icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },
   {
     title: 'Team',
     path: '/team',
-    icon: <InstagramIcon/>,
+    icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },
   {
     title: 'Messages',
     path: '/messages',
-    icon: <FacebookIcon />,
+    icon: <FaIcons.FaEnvelopeOpenText />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Support',
+    path: '/support',
+    icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
   }
-  
 ];
