@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
   font-family: "Lato", sans-serif;
 }
 
@@ -23,4 +23,7 @@
 }
 #home-para {
   font-size: small;
+}
+#home-main {
+  background: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
 }
