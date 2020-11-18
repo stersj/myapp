@@ -4,28 +4,30 @@ import { makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import { red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) =>({
     root: {
-      flexGrow: 1,
+    flexGrow: 1,
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
-  },
+      backgroundColor: "#7c7979",
+        },
        }));
 
 function Home() {
   const classes = useStyles();
   return (
     <div className={classes.root} id="home-main">
-      <Box display="flex" p={3} bgcolor="#383434">
-      <Grid container spacing={3}>
+      <Box display="flex" p={3} bgcolor="#212121">
+      <Grid container spacing={1}>
         <Grid item xs={12}>
           <Paper className={classes.paper}><h1 id="home-heading">Home</h1></Paper>
         </Grid>
-        <Grid item xs={4} id="grid-2" direction="row">
+        <Grid item xs={6} id="grid-2" direction="row">
           <Paper className={classes.paper}><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra ex eu nulla fringilla porttitor. Maecenas lectus tortor, viverra a tincidunt ornare, euismod vitae lectus. Nulla vel fringilla ex, a euismod elit. Ut id orci non nunc feugiat condimentum. Vestibulum lobortis convallis augue, a porttitor odio varius eu. Proin eget augue mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis nunc odio, vitae pretium ligula venenatis sit amet. Nam laoreet ullamcorper urna, sed tempus lorem placerat a. Donec fermentum laoreet tellus at luctus.
 
 In ut tincidunt enim. Sed mattis ante neque, sed luctus tellus blandit eget. Duis consequat ac orci eu gravida. Donec blandit erat non diam sollicitudin, nec pellentesque magna egestas. Nam egestas eros leo, in commodo turpis porttitor vel. Cras lacinia dui id urna elementum, sed commodo ex semper. Etiam ut condimentum elit. Vestibulum sollicitudin id nisl ut sollicitudin. Vivamus non mollis justo.
@@ -39,21 +41,18 @@ Fusce eget pretium mauris. Quisque a tortor sit amet tortor malesuada commodo a 
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper}>xs=6</Paper>
+        </Grid>    
+        <Grid item xs={4} >
+          <Paper className={classes.paper}><h6><strong>Environmental Impact Aseesments and Monitoring</strong></h6></Paper>
         </Grid>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}><h6><strong>Web Design and Digital Marketing</strong></h6></Paper>
         </Grid>
-        </Box>
-      <Grid container spacing={3}> 
-        <Grid item xs={3} >
-          <Paper className={classes.paper}>Lorem Ipsun</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}><h6><strong>Quality Control and Data Management</strong></h6></Paper>
         </Grid>
       </Grid>
-      
+      </Box>
     </div> 
           
   );
