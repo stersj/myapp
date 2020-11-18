@@ -9,7 +9,7 @@
 
 .home,
 .reports,
-.products {
+.services {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -19,11 +19,26 @@
   color: aliceblue;
 }
 #home-heading {
-  color: rgb(23, 25, 27);
+  color: aliceblue;
+}
+.heading-timeline {
+  color: aliceblue;
 }
 #home-para {
   font-size: small;
 }
 #home-main {
   background: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+}
+.timeline {
+  display: inline-block;
+  height: 80%;
+  margin-left: -20rem;
+  margin-right: 50rem;
+}
+.author-image {
+  display: block;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  padding: 5px;
 }
