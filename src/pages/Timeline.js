@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     padding: '16px 25px',
     },
   secondaryTail: {
-    backgroundColor: theme.palette.secondary.main,
-  },
+    backgroundColor: theme.palette.primary.main,
+      },
 }));
 
 export default function CustomTimeline() {
@@ -26,8 +26,8 @@ export default function CustomTimeline() {
 
     return (
       <div>
-        <Box display="auto" p={3} bgcolor="#25272B" >
-        <h2 className="heading-timeline" align='center' padding='5px' color='white'>Timeline</h2>
+        <Box display="auto" p={3} bgcolor="#b7babf" >
+        <h2 className="heading-timeline" align='center' padding='5px'>Timeline</h2>
       <Timeline align="left" className="timeline">
       <TimelineItem >
         <TimelineOppositeContent>
@@ -36,14 +36,14 @@ export default function CustomTimeline() {
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot>
+          <TimelineDot color="primary" variant="outlined">
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector className={classes.secondaryTail}/>
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={6} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Eat
+            <Typography className="date-timeline" variant="h6" component="h1">
+              DHI A/S - Project Manager | Biologist | Webmaster
             </Typography>
             <Typography>Because you need strength</Typography>
           </Paper>
@@ -51,19 +51,19 @@ export default function CustomTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
+          <Typography className="date-timeline" variant="body2" color="textSecondary">
            2015 - 2017
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot color="primary">
+          <TimelineDot color="primary" variant="outlined">
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector className={classes.secondaryTail}/>
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Code
+            <Typography className="date-timeline" variant="h6" component="h1">
+              Medical Product Executive | Freelancer
             </Typography>
             <Typography>Because it&apos;s awesome!</Typography>
           </Paper>
@@ -83,9 +83,9 @@ export default function CustomTimeline() {
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Sleep
+              DHI Water & Environment (M) Sdn. Bhd | Environmental Scientist
             </Typography>
-            <Typography>Because you need rest</Typography>
+            <Typography>Assistant Consultant, Hydrographic Surveyor</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -96,13 +96,13 @@ export default function CustomTimeline() {
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot color="secondary">
-          </TimelineDot>
-        </TimelineSeparator>
+          <TimelineDot color="primary" variant="outlined">
+         </TimelineDot>
+           </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Repeat
+              Radius International | Part Time | Event Organiser
             </Typography>
             <Typography>Because this is the life you love!</Typography>
           </Paper>

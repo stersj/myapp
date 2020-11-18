@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) =>({
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
-      color: theme.palette.text.secondary,
+      color: theme.palette.text.default,
       backgroundColor: "#7c7979",
         },
        }));
@@ -23,18 +23,21 @@ function Home() {
   return (
     <div>
       <div className={classes.root} id="home-main">
-        <Box display="auto" p={3} bgcolor="#25272B" >
+        <Box display="auto" p={30,15} bgcolor="#25272B" >
           <Grid container spacing={1}>
-            <Grid item xs={12}>
-              <Paper className={classes.paper}><h1 id="home-heading">Introduction</h1></Paper>
+            <Grid item xs={3}>
+              <Paper className={classes.paper}><span> <img className="author-image" alt="estherimage"
+          src={Logo}
+          style={{ width: 200, height: 200, borderRadius: 100 }}
+            />
+          </span></Paper>
+            </Grid>
+            <Grid item xs={9}>
+              <Paper className={classes.paper}>xs=6</Paper>
             </Grid>
             <Grid item xs={3} id="grid-2" direction="row">
-              <Paper className={classes.paper}>
-                <div >  <img className="author-image" alt="estherimage"
-          src={Logo}
-          style={{ width: 200, height: 200, borderRadius: 100}}
-            />
-          </div>
+              <Paper className={classes.paper}><br></br>
+                <h3 id="home-heading"> About Me</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra ex eu nulla fringilla porttitor. Maecenas lectus tortor, viverra a tincidunt ornare, euismod vitae lectus. Nulla vel fringilla ex, a euismod elit. Ut id orci non nunc feugiat condimentum. Vestibulum lobortis convallis augue, a porttitor odio varius eu. Proin eget augue mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis nunc odio, vitae pretium ligula venenatis sit amet. Nam laoreet ullamcorper urna, sed tempus lorem placerat a. Donec fermentum laoreet tellus at luctus.
                 In ut tincidunt enim. Sed mattis ante neque, sed luctus tellus blandit eget. Duis consequat ac orci eu gravida. Donec blandit erat non diam sollicitudin, nec pellentesque magna egestas. Nam egestas eros leo, in commodo turpis porttitor vel. Cras lacinia dui id urna elementum, sed commodo ex semper. Etiam ut condimentum elit. Vestibulum sollicitudin id nisl ut sollicitudin. Vivamus non mollis justo.
                 Vivamus lacinia aliquam sem quis fringilla. Integer venenatis et ligula nec sollicitudin. Aenean et volutpat tortor. Cras justo ante, vulputate quis lectus vel, ullamcorper vestibulum augue. Sed sit amet metus consequat, pretium urna sit amet, porta risus. Vestibulum laoreet est in auctor aliquet. Donec ut ligula a leo porta tristique. Aenean ut mi turpis. Fusce eget sem vestibulum, sagittis augue ut, euismod est. Pellentesque finibus mauris sit amet fermentum dapibus. Proin laoreet vel tellus in condimentum. Curabitur in laoreet felis, id laoreet felis.
